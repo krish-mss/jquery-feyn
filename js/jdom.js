@@ -23,7 +23,10 @@ $(document).ready(function() {
   $('body').css('font-size', font.toString() + 'px');
 
   $('[data-width]').each(function() {
-    $(this).css('width', $(this).data('width') + 'em');
+    $(this).css({
+      'width': $(this).data('width') + 'em',
+      'height': $(this).data('height') + 'em'
+    });
   });
 
   if(html != 'index') {

@@ -4,7 +4,7 @@
  * https://github.com/photino/jquery-feyn
  *
  * author: Zan Pan <panzan89@gmail.com>
- * date: 2014-3-17
+ * date: 2014-2-28
  *
  * usage: $(container).feyn(options);
 */

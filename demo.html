@@ -66,7 +66,7 @@
         t6: ['100,10', 'g']},
       image: {m1: ['120,80', 'svg/muon.svg', 65, 34]}
     });
-    $('.feyn').css({'width': '15em', 'cursor': 'crosshair'}).click(function(e) {
+    $('.feyn').css('cursor', 'crosshair').click(function(e) {
       var offset = $(this).offset(),
         x = Math.round(e.pageX - offset.left),
         y = Math.round(e.pageY - offset.top);
@@ -76,9 +76,20 @@
       $(this).html($(this).html());
       return false;
     });
-    $('textarea').css({'width': '45em', 'height': '18.2em', 'font-size': '80%'});
+    $('textarea').css({'width': '48em', 'height': '16.2em'});
   });
 </script>
+<style type="text/css">
+  article section {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 80%;
+  }
+  svg {
+    width: 16.6666em;
+    height: 16.6666em;
+  }
+</style>
 </head>
 
 <body>
@@ -88,7 +99,7 @@
 
 <article>
 <h3>Online Demo</h3>
-<section style="margin:1em auto;text-align:center;">
+<section>
   <div id="aurora"><!-- Insert Feynman diagram here --></div>
   <div id="nightly"><!-- Insert Feynman diagram here --></div>
 </section>
