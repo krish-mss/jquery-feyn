@@ -68,8 +68,9 @@
     });
     $('.feyn').css('cursor', 'crosshair').click(function(e) {
       var offset = $(this).offset(),
-        x = Math.round(e.pageX - offset.left),
-        y = Math.round(e.pageY - offset.top);
+        factor = $(this).width() / 200,
+        x = Math.round((e.pageX - offset.left) / factor),
+        y = Math.round((e.pageY - offset.top) / factor);
       $('svg .feyn_coord').remove();
       $(this).children('svg').append('<text class="feyn_coord" x="' + x +
         '" y="' + y + '" font-size="10">' + x  + ',' + y + '</text>');
